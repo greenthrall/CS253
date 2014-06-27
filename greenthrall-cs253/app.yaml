@@ -1,0 +1,80 @@
+application: greenthrall-cs253
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /unit01/hello.*
+  script: unit01.hello.app
+
+- url: /unit02/date.*
+  script: unit02.date.app
+
+- url: /unit02/rot13.*
+  script: unit02.rot13.app
+
+- url: /unit02/signup.*
+  script: unit02.signup.app
+
+- url: /unit02/welcome.*
+  script: unit02.signup.app
+
+- url: /unit03_styles
+  static_dir: unit03/styles
+
+- url: /unit03/ascii.*
+  script: unit03.ascii.app
+
+- url: /unit03/blog.*
+  script: unit03.blog.app
+
+- url: /unit04_styles
+  static_dir: unit04/styles
+
+- url: /unit04/.*
+  script: unit04.signup.app
+
+- url: /unit05_styles
+  static_dir: unit05/styles
+
+- url: /unit05/ascii.*
+  script: unit05.ascii.app
+
+- url: /unit05/.*
+  script: unit05.blog.app
+
+- url: /unit06_styles
+  static_dir: unit06/styles
+
+- url: /unit06/ascii.*
+  script: unit06.ascii.app
+
+- url: /unit06/.*
+  script: unit06.blog.app
+
+- url: /unit07_styles
+  static_dir: unit07/styles
+
+- url: /unit07/wiki.*
+  script: unit07.wiki.app
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: latest
+
+- name: markupsafe
+  version: latest
+
+- name: PIL
+  version: "1.1.7"
