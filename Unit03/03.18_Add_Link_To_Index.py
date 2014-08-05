@@ -81,11 +81,9 @@ links = [
          "An R programmer looks at Julia",
          "http://www.r-bloggers.com/an-r-programmer-looks-at-julia/")]
 
-
 # links is a list of Link objects. Links have a handful of properties. For
 # example, a Link's number of votes can be accessed by link.votes if "link" is a
 # Link.
-
 def build_link_index():
     index = {}
     for l in links:
@@ -94,11 +92,21 @@ def build_link_index():
 
 link_index = build_link_index()
 
+
 def link_by_id(link_id):
-	return link_index.get(link_id)
+    return link_index.get(link_id)
 
 # QUIZ - implement the function add_new_link() that both adds a link to the 
 # "links" list and updates the link_index dictionary. 
 def add_new_link(link):
     links.append(link)
     link_index[link.id] = link
+
+
+print link_by_id(24)
+
+l = Link(50, 1, 1, 1, "Title", "Url")
+add_new_link(l)
+
+print links[-1]
+print link_by_id(50)

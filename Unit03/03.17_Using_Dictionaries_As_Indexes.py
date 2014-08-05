@@ -94,6 +94,7 @@ def build_link_index():
         link_dict[v_link.id] = v_link
     return link_dict
 
+
 def link_by_id(link_id):
     for l in links:
         if l.id == link_id:

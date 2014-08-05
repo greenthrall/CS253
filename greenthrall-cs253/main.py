@@ -2,7 +2,7 @@
 import cgi
 import webapp2
 
-menu="""
+menu = """
 <nav>
     <ul>
         <li><a href="/unit01/hello">Unit 01 Hello World</a></li>
