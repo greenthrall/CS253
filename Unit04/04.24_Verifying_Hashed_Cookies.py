@@ -1,10 +1,13 @@
+
 import hashlib
+
 
 def hash_str(s):
     return hashlib.md5(s).hexdigest()
 
+
 def make_secure_val(s):
-    return "%s,%s" % (s, hash_str(s))
+    return "%s, %s" % (s, hash_str(s))
 
 # -----------------
 # User Instructions
@@ -12,6 +15,7 @@ def make_secure_val(s):
 # Implement the function check_secure_val, which takes a string of the format 
 # s,HASH
 # and returns s if hash_str(s) == HASH, otherwise None 
+
 
 def check_secure_val(h):
     v_result = h.split(',')[0]
@@ -27,3 +31,4 @@ def check_secure_val(h):
 #            return v_orig
 
 print check_secure_val(make_secure_val('cool'))
+print check_secure_val(make_secure_val('udacity'))
